@@ -43,8 +43,15 @@ public class Calculator {
         return ans;
     }
     
+    public double sum(){
+        this.setAns(opA+opB);
+        return ans;
+    }
     
-    
+    public double subtraction(){
+        this.setAns(opA-opB);
+        return ans;
+    }
     
     
     
