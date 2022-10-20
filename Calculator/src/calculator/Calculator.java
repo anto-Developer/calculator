@@ -18,6 +18,34 @@ public class Calculator {
         opB = 0;
         ans = 0;
     }
+
+    public void setOpA(double opA) {
+        this.opA = opA;
+    }
+
+    public void setOpB(double opB) {
+        this.opB = opB;
+    }
+
+    public void setAns(double ans) {
+        this.ans = ans;
+    }
+
+    public double getOpA() {
+        return opA;
+    }
+
+    public double getOpB() {
+        return opB;
+    }
+
+    public double getAns() {
+        return ans;
+    }
+    
+    
+    
+    
     
     
     
