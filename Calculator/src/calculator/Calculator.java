@@ -50,10 +50,16 @@ public class Calculator {
     
     public double division(){
         this.ans = this.opA / this.opB;
+
+    public double sum(){
+        this.setAns(opA+opB);
         return ans;
     }
     
-    
+    public double subtraction(){
+        this.setAns(opA-opB);
+        return ans;
+    }
     
     
     
