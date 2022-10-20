@@ -5,6 +5,9 @@
  */
 package calculator;
 
+import java.util.Scanner;
+
+
 /**
  *
  * @author Cristian
@@ -17,9 +20,26 @@ public class MainCalculator {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("CALCOLATRICE");
+        Calculator c = new Calculator();
+        Scanner s = new Scanner(System.in);
+        double opA, opB;
         
         while(true){
+            System.out.println("Quale operazione vuoi eseguire?\n+ Per eseguire una somma\n- Per eseguire una sottrazione\n* Per eseguire una moltiplicazione\n/ Per eseguire una divisione\n\n");
+            String input = s.next();
+
+            System.out.println("Inserisci i due operandi");
+            opA = s.nextDouble();
+            opB = s.nextDouble();
+            c.setOpA(opA);
+            c.setOpB(opB);
             
+            switch(input){
+                case "+":{
+                    System.out.format("%.2f\n", c.sum());
+                }
+            }
+                    
         }
     }
     
