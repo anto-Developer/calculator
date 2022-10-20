@@ -10,14 +10,15 @@ package calculator;
  * @author anton
  */
 public class Calculator {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello world");
-        //test
+    
+    double opA, opB, ans;
+    
+    public Calculator() {
+        opA = 0;
+        opB = 0;
+        ans = 0;
     }
+    
+    
     
 }
