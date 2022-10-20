@@ -43,6 +43,15 @@ public class Calculator {
         return ans;
     }
     
+    public double multiplication(){
+        this.ans = this.opA * this.opB;
+        return ans;
+    }
+    
+    public double division(){
+        this.ans = this.opA / this.opB;
+        return ans;
+    }
     
     
     
