@@ -5,6 +5,8 @@
  */
 package calculator;
 
+import java.util.HashMap;
+
 /**
  *
  * @author anton
@@ -12,11 +14,12 @@ package calculator;
 public class Calculator {
     
     double opA, opB, ans;
-    
+    HashMap<String, Double> var;
     public Calculator() {
         opA = 0;
         opB = 0;
         ans = 0;
+        var = new HashMap();
     }
 
     public void setOpA(double opA) {
@@ -63,7 +66,22 @@ public class Calculator {
         return ans;
     }
     
+    public void memorySet(String valName, double val){
+        var.put(valName, val);
+    }
     
+    public double memoryGet(String valName){
+        return var.get(valName);
+    }
+    
+    public void memoryDelete(String valName) throws NotFoundKeyException {
+        if(var.remove(valName) == null)
+            throw new NotFoundKeyException();
+    }
+    
+    public void memoryClear(){
+        var.clear();
+    }
     
     
 }
