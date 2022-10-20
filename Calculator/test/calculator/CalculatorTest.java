@@ -5,12 +5,6 @@
  */
 package calculator;
 
-
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -141,7 +135,7 @@ public class CalculatorTest {
      @Test
     public void testMemoryClear() {
       c.memoryClear();
-      assertEquals(true,c.var.isEmpty());
+      assertEquals(true,c.memoryIsEmpty());
     }
     
    
