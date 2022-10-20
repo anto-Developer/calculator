@@ -13,8 +13,9 @@ import java.util.HashMap;
  */
 public class Calculator {
     
-    double opA, opB, ans;
-    HashMap<String, Double> var;
+    private double opA, opB, ans;
+    private final HashMap<String, Double> var;
+    
     public Calculator() {
         opA = 0;
         opB = 0;
@@ -70,7 +71,10 @@ public class Calculator {
         var.put(valName, val);
     }
     
-    public double memoryGet(String valName){
+    public double memoryGet(String valName) throws NotFoundKeyException{
+        if(var.get(valName) == null){
+            throw new NotFoundKeyException();
+        }
         return var.get(valName);
     }
     
@@ -81,6 +85,25 @@ public class Calculator {
     
     public void memoryClear(){
         var.clear();
+    }
+    
+    public boolean memoryIsEmpty(){
+        return var.isEmpty();
+    }
+    
+    public double sin(){
+        this.ans = Math.sin(this.opA);
+        return ans;
+    }
+    
+    public double cos(){
+        this.ans = Math.cos(this.opA);
+        return ans;
+    }
+    
+    public double tan(){
+        this.ans = Math.tan(this.opA);
+        return ans;
     }
     
     
