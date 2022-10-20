@@ -5,16 +5,15 @@
  */
 package calculator;
 
-import org.junit.*;
-import static org.junit.Assert.*;
-/*
+
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-*/
+
 
 /**
  *
@@ -35,6 +34,15 @@ public class CalculatorTest {
        c.setOpA(4);
        c.setOpB(5);
        assertEquals(9,c.sum(),DELTA);
+       c.setOpA(-4);
+       c.setOpB(5);
+       assertEquals(1,c.sum(),DELTA);
+       c.setOpA(4);
+       c.setOpB(-5);
+       assertEquals(-1,c.sum(),DELTA);
+       c.setOpA(-4);
+       c.setOpB(-5);
+       assertEquals(-9,c.sum(),DELTA);
     }
 
     /**
@@ -45,6 +53,16 @@ public class CalculatorTest {
         c.setOpA(6);
         c.setOpB(5);
         assertEquals(1,c.subtraction(),DELTA);
+        c.setOpA(5);
+        c.setOpB(6);
+        assertEquals(-1,c.subtraction(),DELTA);
+        c.setOpA(-5);
+        c.setOpB(6);
+        assertEquals(-11,c.subtraction(),DELTA);
+        c.setOpA(-5);
+        c.setOpB(-6);
+        assertEquals(1,c.subtraction(),DELTA);
+        
     }
     
       /**
@@ -55,6 +73,15 @@ public class CalculatorTest {
         c.setOpA(21);
         c.setOpB(7);
         assertEquals(3,c.division(),DELTA);
+        c.setOpA(-21);
+        c.setOpB(7);
+        assertEquals(-3,c.division(),DELTA);
+        c.setOpA(-21);
+        c.setOpB(-7);
+        assertEquals(3,c.division(),DELTA);
+        c.setOpA(21);
+        c.setOpB(-7);
+        assertEquals(-3,c.division(),DELTA);
      
     }
     
@@ -67,6 +94,15 @@ public class CalculatorTest {
         c.setOpA(3);
         c.setOpB(3);
         assertEquals(9,c.multiplication(),DELTA);
+        c.setOpA(3);
+        c.setOpB(-3);
+        assertEquals(-9,c.multiplication(),DELTA);
+        c.setOpA(-3);
+        c.setOpB(-3);
+        assertEquals(9,c.multiplication(),DELTA);
+        c.setOpA(-3);
+        c.setOpB(3);
+        assertEquals(-9,c.multiplication(),DELTA);
     }
     
     
