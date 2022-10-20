@@ -25,17 +25,36 @@ public class MainCalculator {
         double opA, opB;
         
         while(true){
+            System.out.println("");
             System.out.println("Quale operazione vuoi eseguire?\n+ Per eseguire una somma\n- Per eseguire una sottrazione\n* Per eseguire una moltiplicazione\n/ Per eseguire una divisione\n\n");
             String input = s.next();
+            
+            System.out.println("Inserisci i due operandi separati da un invio, usa X per utilizzare l'ultimo risultato\n");
+            input = s.next();
+            if(input.equals("X")){
+                c.setOpA(c.getAns());
+            }else{
+                c.setOpA(Double.parseDouble(input));
+            }
+            input = s.next();
+            if(input.equals("X")){
+                c.setOpA(c.getAns());
+            }else{
+                c.setOpA(Double.parseDouble(input));
+            }
 
-            System.out.println("Inserisci i due operandi");
-            opA = s.nextDouble();
-            opB = s.nextDouble();
-            c.setOpA(opA);
-            c.setOpB(opB);
             
             switch(input){
                 case "+":{
+                    System.out.format("%.2f\n", c.sum());
+                }
+                case "-":{
+                    System.out.format("%.2f\n", c.sum());
+                }
+                case "*":{
+                    System.out.format("%.2f\n", c.sum());
+                }
+                case "/":{
                     System.out.format("%.2f\n", c.sum());
                 }
             }
