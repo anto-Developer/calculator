@@ -133,7 +133,7 @@ public class MainCalculator {
         }
         
     }
-    
+    //SUPER MY SERVICE
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("CALCOLATRICE");
@@ -158,11 +158,7 @@ public class MainCalculator {
                 default:{
                     System.out.println("Operazione non consentito");
                 }
-            }
-            
-            
-
-                    
+            }       
         }
     }
     
