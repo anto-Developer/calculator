@@ -6,9 +6,6 @@
 package calculator;
 
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 /**
  *
@@ -133,7 +130,7 @@ public class MainCalculator {
         }
         
     }
-    //SUPER MY SERVICE
+    
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("CALCOLATRICE");
